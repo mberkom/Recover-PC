@@ -1,0 +1,17 @@
+CREATE TABLE `devices` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(250) NOT NULL,
+  `hash` varchar(100) NOT NULL,
+  `is_stolen` tinyint(1) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=latin1;
+
+CREATE TABLE `locations` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `device_id` int(11) NOT NULL,
+  `user_agent` text,
+  `ip` varchar(100) NOT NULL,
+  `unixtime` varchar(250) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `device_id` (`device_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;

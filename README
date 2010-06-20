@@ -1,3 +1,4 @@
 Recover PC README
 
-- Nothing here yet...
+- Edit config.php for your server preferences
+- Import sql.txt into your MYSQL database

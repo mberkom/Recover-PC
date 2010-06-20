@@ -15,4 +15,9 @@
 	$db['password'] = "iwanttobefound";
 	$db['database'] = "recover_pc";
 	$timezone = "America/Los_Angeles";
+	
+	define("DEVICETABLE", "devices");
+	define("LOCATIONTABLE", "locations");
+	define("BASEURL", "/recoverpc");
+	date_default_timezone_set($timezone);
 ?>

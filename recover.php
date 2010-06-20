@@ -11,18 +11,15 @@
 	 * @copyright 2010 Michael Berkompas
 	 */
 	
-	/* Load Base Functions */
-	require("functions.php");
-
 	/* Load User Definitions */
 	require("config.php");
+	
+	/* Load Base Functions */
+	require("functions.php");
 		
 	/* System Definitions */
 	
 	$hash = input_get("hash"); // Computer id hash
-	define("DEVICETABLE", "devices");
-	define("LOCATIONTABLE", "locations");
-	date_default_timezone_set($timezone);
 	
 	/* Application */
 	
