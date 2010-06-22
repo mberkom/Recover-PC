@@ -82,7 +82,7 @@
 	}
 
 	function insert_device($device_name) {
-		$hash = random_string(50);
+		$hash = random_string(20);
 
 		$device = mysql_query("
 			INSERT INTO ".DEVICETABLE."

@@ -54,7 +54,7 @@
 				break;
 		}
 	}
-
+	
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -94,13 +94,15 @@
 						<th>Time Recorded</th>
 					</thead>
 					<tbody>
-					<?php foreach($locations as $l): ?>
-						<tr>
-							<td><?=$l['ip']?></td>
-							<td><?=$l['user_agent']?></td>
-							<td><?=date("g:i  a l, M Y", $l['unixtime'])?></td>
-						</tr>
-					<?php endforeach; ?>
+					<?php if(is_array($locations)): ?>
+						<?php foreach($locations as $l): ?>
+							<tr>
+								<td><?=$l['ip']?></td>
+								<td><?=$l['user_agent']?></td>
+								<td><?=date("g:i  a l, M Y", $l['unixtime'])?></td>
+							</tr>
+						<?php endforeach; ?>
+					<?php endif; ?>
 					</tbody>
 				</table>
 			<?php else: ?>
